@@ -1,0 +1,70 @@
+@import "normalize";
+@import "variables";
+
+
+html {
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+    font-family: $mainFont;
+    background-color: $lightBg;
+    color: $fontDark;
+    margin: 0;
+    line-height: 1.6; 
+}
+
+h1, h2, h3 {
+    font-family: $headingFont;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: light;
+    transition: background-color $transition, color $transition;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+}
+
+a {
+    color: $accentColor;
+    text-decoration: none;
+    transition: color $transition;
+
+    &:hover {
+        color: darken($accentColor, 8%);
+    }
+}
+
+
+@import "small";
+
+
+@media only screen and (min-width: 37.5rem) { 
+    @import "medium";
+}
+
+
+@media only screen and (min-width: 60rem) { 
+    @import "large";
+}
