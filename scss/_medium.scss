@@ -12,3 +12,11 @@ nav ul {
 nav ul li {
     display: inline-block;     
 }
+
+/* Ensure link-level active class highlights on medium+ screens */
+nav ul li a.active {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 4px;
+}

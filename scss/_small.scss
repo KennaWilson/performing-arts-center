@@ -52,15 +52,15 @@ nav ul {
 
     li a {
         display: block;
-        padding: 1rem;
-        color: #ccc;
+        padding: 10px 20px;
         text-decoration: none;
-        text-align: left; 
-        transition: color 0.3s;
+        color: #ffffff; // Default link color
+        text-align: left;
+        transition: background-color 0.3s;
 
         position: relative;
         &:hover {
-            color: $fontLight; 
+            color: $fontLight;
         }
 
         &::after {
@@ -80,10 +80,16 @@ nav ul {
             transform: scaleX(1);
             background: $accentColor;
         }
+
+        &.active {
+            background-color: #007bff; // A nice bright blue
+            color: #ffffff;            // Keeps the text white
+            font-weight: bold;         // Makes it pop more
+        }
     }
 
     li.active a {
-        background-color: #333; 
+        background-color: $color-active; 
         color: $fontLight;
         border-radius: 4px;      
     }
